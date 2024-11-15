@@ -8,19 +8,20 @@ public class gut extends Sanpham {
         super();
     }
 
-    public gut(double masp, double slcon, double gia, String tensp, String chatlieu, String mau,String kieugot,double docao) {
-        super(masp,slcon,gia,tensp,chatlieu,mau,kieugot,);
-        this.kieugot=kieugot;
-        this.docao=docao;
+    public gut(double masp, double slcon, double gia, String tensp, String chatlieu, String mau, String kieugot,
+            double docao) {
+        super(masp, slcon, gia, tensp, chatlieu, mau);
+        this.kieugot = kieugot;
+        this.docao = docao;
     }
 
     @Override
     public void nhap() {
         super.nhap();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap kiu got");
+        System.out.println("Nhap kiu got :");
         kieugot = sc.nextLine();
-        System.out.println("Nhap do cao");
+        System.out.println("Nhap do cao: ");
         docao = sc.nextDouble();
         sc.close();
     }

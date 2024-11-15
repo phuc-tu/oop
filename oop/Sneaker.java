@@ -44,9 +44,10 @@ public class Sneaker extends Sanpham {
     }
 
     @Override
-    public void xuat(){
+    public void xuat() {
         super.xuat();
-        System.out.println("coday:"+coday);
-        System.out.println("ung dung:"+ungdung);
+        System.out.println("coday:" + coday);
+        System.out.println("ung dung:" + ungdung);
 
     }
+}
