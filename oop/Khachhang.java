@@ -72,7 +72,7 @@ public class Khachhang {
         sc.nextLine();
         System.out.println("Nhap address :");
         address = sc.nextLine();
-        System.out.println(" Nhap so tien giaodịc: ");
+        System.out.println(" Nhap so tien giao dich: ");
         sotiengd = sc.nextDouble();
 
     }
@@ -81,8 +81,8 @@ public class Khachhang {
         System.out.println("Ma khach hang :" + maKh);
         System.out.println("Ten :" + name);
         System.out.println("So dien thoai :" + number);
-        System.out.println("nhap dia chi :" + address);
-        System.out.println("Loai khach hang :" + sotiengd);
+        System.out.println("Nhap dia chi :" + address);
+        System.out.println("So tien giao dich cua khach hang :" + sotiengd);
     }
 
 }

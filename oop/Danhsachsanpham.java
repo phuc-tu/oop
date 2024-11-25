@@ -50,7 +50,6 @@ public class Danhsachsanpham {
             }
         } while (choice != 0);
 
-        sc.close();
     }
 
     public void nhapKh() {
@@ -62,13 +61,13 @@ public class Danhsachsanpham {
 
         int choice;
         do {
-            System.out.println("\n====== MENU QUAN LY NHAN VIEN ======");
-            System.out.println("1. Tao danh sach nhan vien");
-            System.out.println("2. Hien thi danh sach nhan vien");
-            System.out.println("3. Xoa nhan vien");
-            System.out.println("4. Sua nhan vien");
-            System.out.println("5. Tim kiem nhan vien");
-            System.out.println("6. Sap xep nhan vien theo luong tang dan");
+            System.out.println("\n====== MENU QUAN LY KHACH HANG ======");
+            System.out.println("1. Tao danh sach khach hang");
+            System.out.println("2. Hien thi danh sach khach hang");
+            System.out.println("3. Xoa khach hang");
+            System.out.println("4. Sua khach hang");
+            System.out.println("5. Tim kiem khach hang");
+            System.out.println("6. Sap xep khach hang theo luong tang dan");
             System.out.println("0. Thoat");
             System.out.print("Nhap lua chon cua ban: ");
             choice = sc.nextInt();
