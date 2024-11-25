@@ -1,46 +1,107 @@
 import java.util.Scanner;
 
 public class Danhsachsanpham {
-    public static void main(String[] args) {
+    public void nhapNv() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap so luong Nhan vien");
-        int sl = sc.nextInt();
-        Danhsachnhanvien dsnv = new Danhsachnhanvien(sl);
-        int chon;
+        System.out.println("Nhap so luong nhan vien toi da trong danh sach:");
+        int n = sc.nextInt();
+        sc.nextLine();
+        Danhsachnhanvien danhSachNhanVien = new Danhsachnhanvien(n);
+
+        int choice;
         do {
-            System.out.println(".... Moi ban chon");
-            System.out.println("1.Them nha vien");
-            System.out.println("2.Xoa nhan vien");
-            System.out.println("3.Sua nhan vien");
-            System.out.println("4.Tim kiem nhan vien");
-            System.out.println("5.Sap xep nhan vien theo luong");
-            System.out.println("6.Hien thi");
-            System.out.println("Nhap lua chon cua ban");
-            chon = sc.nextInt();
-            switch (chon) {
+            System.out.println("\n====== MENU QUAN LY NHAN VIEN ======");
+            System.out.println("1. Tao danh sach nhan vien");
+            System.out.println("2. Hien thi danh sach nhan vien");
+            System.out.println("3. Xoa nhan vien");
+            System.out.println("4. Sua nhan vien");
+            System.out.println("5. Tim kiem nhan vien");
+            System.out.println("6. Sap xep nhan vien theo luong tang dan");
+
+            System.out.println("0. Thoat");
+            System.out.print("Nhap lua chon cua ban: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
                 case 1:
-                    dsnv.themNhanvien();
+                    danhSachNhanVien.taoDanhsachnhanvien();
                     break;
                 case 2:
-                    dsnv.themNhanvien();
+                    danhSachNhanVien.hienThidanhsachnv();
                     break;
                 case 3:
-                    dsnv.xoaNhanvien();
+                    danhSachNhanVien.xoaNhanvien();
                     break;
                 case 4:
-                    dsnv.timKiemnhanvien();
+                    danhSachNhanVien.suaNhanvien();
                     break;
                 case 5:
-                    dsnv.sapXepnhanvien();
+                    danhSachNhanVien.timKiemnhanvien();
                     break;
                 case 6:
-                    dsnv.hienThidanhsach();
+                    danhSachNhanVien.sapXepnhanvien();
                     break;
 
-                default:
-                    System.out.println("Lua chon khong hop le moi chon lai");
+                case 0:
+                    System.out.println("Thoat chuong trinh.");
                     break;
+                default:
+                    System.out.println("Lua chon khong hop le. Vui long nhap lai.");
             }
-        } while (chon != 6);
+        } while (choice != 0);
+
+        sc.close();
     }
+
+    public void nhapKh() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap so luong khach hang toi da trong danh sach:");
+        int m = sc.nextInt();
+        sc.nextLine();
+        Danhsachkhachhang danhsachkhachhang = new Danhsachkhachhang(m);
+
+        int choice;
+        do {
+            System.out.println("\n====== MENU QUAN LY NHAN VIEN ======");
+            System.out.println("1. Tao danh sach nhan vien");
+            System.out.println("2. Hien thi danh sach nhan vien");
+            System.out.println("3. Xoa nhan vien");
+            System.out.println("4. Sua nhan vien");
+            System.out.println("5. Tim kiem nhan vien");
+            System.out.println("6. Sap xep nhan vien theo luong tang dan");
+            System.out.println("0. Thoat");
+            System.out.print("Nhap lua chon cua ban: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    danhsachkhachhang.taoDanhsachkhachhang();
+                    break;
+                case 2:
+                    danhsachkhachhang.hienThidanhsachkh();
+                    break;
+                case 3:
+                    danhsachkhachhang.xoaKhachhang();
+                    break;
+                case 4:
+                    danhsachkhachhang.suaKhachhang();
+                    break;
+                case 5:
+                    danhsachkhachhang.timKiemKhachhang();
+                    break;
+                case 6:
+                    danhsachkhachhang.sapXepKhachhang();
+                    break;
+
+                case 0:
+                    System.out.println("Thoat chuong trinh.");
+                    break;
+                default:
+                    System.out.println("Lua chon khong hop le. Vui long nhap lai.");
+            }
+        } while (choice != 0);
+
+        sc.close();
+    }
+
 }

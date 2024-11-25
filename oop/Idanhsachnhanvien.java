@@ -1,6 +1,5 @@
 public interface Idanhsachnhanvien {
-
-    void themNhanvien();
+    void taoDanhsachnhanvien();
 
     void xoaNhanvien();
 
@@ -9,4 +8,6 @@ public interface Idanhsachnhanvien {
     void timKiemnhanvien();
 
     void sapXepnhanvien();
+
+    void hienThidanhsachnv();
 }

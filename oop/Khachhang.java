@@ -3,20 +3,20 @@ import java.util.Scanner;
 public class Khachhang {
     private int maKh;
     private String name;
-    private int number;
+    private double number;
     private String address;
-    private String loaiKh;
+    private double sotiengd;
 
     public Khachhang() {
 
     }
 
-    public Khachhang(int maKh, String name, int number, String address, String loaiKh) {
+    public Khachhang(int maKh, String name, double number, String address, double sotiengd) {
         this.maKh = maKh;
         this.name = name;
         this.number = number;
         this.address = address;
-        this.loaiKh = loaiKh;
+        this.sotiengd = sotiengd;
     }
 
     public int getMaKh() {
@@ -35,12 +35,12 @@ public class Khachhang {
         this.name = name;
     }
 
-    public int getNumber() {
+    public double getNumber() {
         return number;
 
     }
 
-    public void setNumber(int number) {
+    public void setNumber(double number) {
         this.number = number;
     }
 
@@ -52,12 +52,12 @@ public class Khachhang {
         this.address = address;
     }
 
-    public String getLoaiKh() {
-        return loaiKh;
+    public double getSotiengd() {
+        return sotiengd;
     }
 
-    public void setLoaiKh(String loaiKh) {
-        this.loaiKh = loaiKh;
+    public void setLoaiKh(double sotiengd) {
+        this.sotiengd = sotiengd;
     }
 
     public void nhap() {
@@ -72,8 +72,8 @@ public class Khachhang {
         sc.nextLine();
         System.out.println("Nhap address :");
         address = sc.nextLine();
-        System.out.println(" Loai khach hang: ");
-        loaiKh = sc.nextLine();
+        System.out.println(" Nhap so tien giaodịc: ");
+        sotiengd = sc.nextDouble();
 
     }
 
@@ -82,7 +82,7 @@ public class Khachhang {
         System.out.println("Ten :" + name);
         System.out.println("So dien thoai :" + number);
         System.out.println("nhap dia chi :" + address);
-        System.out.println("Loai khach hang :" + loaiKh);
+        System.out.println("Loai khach hang :" + sotiengd);
     }
 
 }
