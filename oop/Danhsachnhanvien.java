@@ -50,6 +50,36 @@ public class Danhsachnhanvien implements Idanhsachnhanvien {
     }
 
     @Override
+    public void themNhanvien() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap so luong nhan vien can them: ");
+        int soLuongThem = sc.nextInt();
+        sc.nextLine();
+
+        for (int i = 0; i < soLuongThem; i++) {
+            System.out.println("Nhap thong tin nhan vien thu " + (i + 1) + ":");
+
+            Nhanvien nv = new Nhanvien(); //
+            nv.nhap(); //
+
+            if (size == dsnv.length) {
+                Nhanvien[] temp = new Nhanvien[dsnv.length + 5];
+                for (int j = 0; j < dsnv.length; j++) {
+                    temp[j] = dsnv[j];
+                }
+                dsnv = temp;
+            }
+
+            dsnv[size] = nv;
+            size++;
+            System.out.println("Nhan vien thu " + (i + 1) + " da duoc them thanh cong!");
+        }
+
+        System.out.println("Da them " + soLuongThem + " nhan vien vao danh sach.");
+    }
+
+    @Override
     public void suaNhanvien() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap ma nhan vien can sua thong tin nhan vien:");

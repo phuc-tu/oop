@@ -28,6 +28,35 @@ public class Danhsachkhachhang implements IDanhsachkhachhang {
     }
 
     @Override
+    public void themKhachhang() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap so luong khach hang can them: ");
+        int soLuongThem = sc.nextInt();
+        sc.nextLine();
+
+        for (int i = 0; i < soLuongThem; i++) {
+            System.out.println("Nhap thong tin khach hang thu " + (i + 1) + ":");
+
+            Khachhang kh = new Khachhang();
+            kh.nhap();
+            if (size == dskh.length) {
+                Khachhang[] temp = new Khachhang[dskh.length + 5];
+                for (int j = 0; j < dskh.length; j++) {
+                    temp[j] = dskh[j];
+                }
+                dskh = temp;
+            }
+
+            dskh[size] = kh;
+            size++;
+            System.out.println("Khach hang thu " + (i + 1) + " da duoc them thanh cong!");
+        }
+
+        System.out.println("Da them " + soLuongThem + " khach hang vao danh sach.");
+    }
+
+    @Override
     public void suaKhachhang() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap ma khach hang can sua:");

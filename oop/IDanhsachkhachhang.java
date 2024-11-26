@@ -1,6 +1,8 @@
 public interface IDanhsachkhachhang {
     void taoDanhsachkhachhang();
 
+    void themKhachhang();
+
     void suaKhachhang();
 
     void xoaKhachhang();
